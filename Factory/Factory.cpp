@@ -7,5 +7,8 @@ int main()
 
 	theCreator = new ConCreatorA();
 	theProduct = theCreator->FactoryMethod();
+
+	theCreator = new ConCreatorB();
+	theProduct = theCreator->FactoryMethod();
 	return 0;
 }
