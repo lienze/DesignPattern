@@ -25,34 +25,25 @@ public:
 class Creator
 {
 public:
-	virtual Product* FactoryMethod()=0;//纯虚函数
+	virtual Product* FactoryMethod(int iType)=0;//纯虚函数
 };
 
-class ConCreatorA:public Creator
+class ConCreator:public Creator
 {
 public:
-	ConCreatorA()
+	ConCreator()
 	{
 		printf("产生工厂:ConCreatorA\n");
 	}
-	virtual Product* FactoryMethod()
+	virtual Product* FactoryMethod(int iType)
 	{
-		return new ProductA();
+		switch(iType)
+		{
+			case 1:return new ProductA();break;
+			case 2:return new ProductB();break;
+			default:break;
+		}
 	}
 };
-
-class ConCreatorB:public Creator
-{
-public:
-	ConCreatorB()
-	{
-		printf("产生工厂:ConCreatorB\n");
-	}
-	virtual Product* FactoryMethod()
-	{
-		return new ProductB();
-	}
-};
-
 
 

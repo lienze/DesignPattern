@@ -5,10 +5,10 @@ int main()
 	Product *theProduct = NULL;
 	Creator *theCreator = NULL;
 
-	theCreator = new ConCreatorA();
-	theProduct = theCreator->FactoryMethod();
+	theCreator = new ConCreator();
+	theProduct = theCreator->FactoryMethod(1);
 
-	theCreator = new ConCreatorB();
-	theProduct = theCreator->FactoryMethod();
+	theCreator = new ConCreator();
+	theProduct = theCreator->FactoryMethod(2);
 	return 0;
 }
