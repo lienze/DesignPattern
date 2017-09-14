@@ -1,4 +1,4 @@
-//״̬ģʽ
+//State Pattern
 #include <stdio.h>
 #include "State.h"
 
@@ -21,7 +21,7 @@ public:
 };
 
 
-void main()
+int main()
 {
 	stateA *A = new stateA();
 	stateB *B = new stateB();
@@ -31,6 +31,6 @@ void main()
 	pStateCtl->SetState(B);
 	pStateCtl->Request();
 	
-	getchar();
-	return;
+	//getchar();
+	return 0;
 }
